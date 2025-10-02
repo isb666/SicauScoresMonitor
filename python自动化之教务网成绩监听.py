@@ -51,16 +51,16 @@ if len(datas)>currrent_length:
 
     # 2、登陆邮箱
     # 设置登录邮箱的帐号为："zhangxiaofan@qq.com"，赋值给mailUser
-    mailUser = "298198651@qq.com"
+    mailUser = "yourRobot@qq.com"
     # 将邮箱授权码"xxxxx"，赋值给mailPass
-    mailPass = "wudbkfkhsgmkbiij"
+    mailPass = "xxxxxx"
     # 登录邮箱：调用对象qqMail的login()方法，传入邮箱账号和授权码
     qqMail.login(mailUser, mailPass)
 
     # 3、编辑收发件人
     # 设置发件人和收件人
-    sender = "298198651@qq.com"
-    receiver = "3217418192@qq.com"
+    sender = "yourRobot@qq.com"
+    receiver = "yourRealMail@qq.com"
     # 使用类MIMEMultipart，创建一个实例对象message
     message = MIMEMultipart()
     # 将主题写入 message["Subject"]
@@ -81,3 +81,4 @@ if len(datas)>currrent_length:
     qqMail.sendmail(sender, receiver, message.as_string())
     # 输出"发送成功"
     print("发送成功")
+
